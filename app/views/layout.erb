@@ -20,20 +20,34 @@
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <section class = "logInLink">
-    <a href="">Log In</a>
-    </section>
-    <section class = "signUpLink">
-    <a href="/users/new">Sign Up</a>
+
+    <% if logged_in? %>
+    
+    <section class = "startStreaming">
+    <a href="/users/<%= session[:id] %>">My Page</a>
     </section>
     <section class = "SearchLink">
-    <a href="">Search</a>
+      <a href="">Search</a>
     </section>
+    
+    <% else %>
+    
+    <section class = "logInLink">
+      <a href="/users/login">Log In</a>
+    </section>
+    <section class = "signUpLink">
+      <a href="/users/new">Sign Up</a>
+    </section>
+    <section class = "SearchLink">
+      <a href="">Search</a>
+    </section>
+
+    <% end %>
   </div>
 
   <div id="main">
     <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-  <%= yield %>
+    <%= yield %>
   </div>
 </body>
 </html>
