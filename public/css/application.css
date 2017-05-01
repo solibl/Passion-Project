@@ -1,5 +1,6 @@
 body {
     font-family: "Lato", sans-serif;
+    max-width: 90%;
 }
 
 @media screen and (max-height: 450px) {
@@ -7,6 +8,7 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
+/*Side Nav Bar*/
 .sidenav {
     height: 100%;
     width: 0;
@@ -51,6 +53,8 @@ body {
     margin-left: 5%;
 }
 
+/*Sign Up Form*/
+
 .signup-form {
     padding: .5%;
     text-align: center;
@@ -60,8 +64,14 @@ body {
     text-align: center;
 }
 
+/*Search Bar*/
 img {
     position: relative;
-   width: 700px;
-   height: 400px;
+    width: 700px;
+    height: 400px;
+}
+
+#streamerBox {
+    display: inline-block;
+    padding-top: 50px;
 }
