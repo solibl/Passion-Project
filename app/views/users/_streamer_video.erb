@@ -1,0 +1,15 @@
+<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+<div id="<%=@user.username%>"></div>
+<script type="text/javascript">
+	var options = {
+		width: 1000,
+		height: 500,
+ 		channel: "<%=@user.username%>",
+ 		autoplay: false,
+ 		video: "<video ID>",
+		collection: "<collection ID>",
+
+	};
+	var player = new Twitch.Player("<%=@user.username%>", options);
+	player.setVolume(0.5);
+</script>
