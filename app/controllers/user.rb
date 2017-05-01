@@ -3,7 +3,7 @@ get '/users/new' do
 end
 
 get '/users/login' do
-	erb :'users/login'
+	erb :'/users/login'
 end
 
 get '/users/logout' do
@@ -12,6 +12,24 @@ get '/users/logout' do
 end
 
 get '/users/:id' do
+	@user = User.find(params[:id])
+	if session[:id] == @user.id
+		erb :'/users/show'
+	else
+		@errors = ["You are not authorized to see that page"]
+		erb :"index"
+	end
+end
+
+get '/users/:id/subscribed' do
+	@user = User.find(params[:id])
+	if session[:id] == @user.id
+		@subscribed_channels = @user.subscribed_streamers
+		erb :'/users/subscribed'
+	else
+		@errors = ["You are not authorized to see that page"]
+		erb :"index"
+	end
 end
 
 post '/users' do
