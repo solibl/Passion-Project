@@ -21,6 +21,17 @@ get '/users/:id' do
 	end
 end
 
+get '/users/:id/subscribed' do
+	@user = User.find(params[:id])
+	if session[:id] == @user.id
+		@subscribed_channels = @user.subscribed_streamers
+		erb :'/users/subscribed'
+	else
+		@errors = ["You are not authorized to see that page"]
+		erb :"index"
+	end
+end
+
 post '/users' do
 	@user = User.new(params[:user])
 	if @user.save

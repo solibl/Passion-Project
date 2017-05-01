@@ -20,21 +20,24 @@
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+    <section class = "homepage">
+      <a href="/">Home</a>
+    </section>
     <% if logged_in? %>
-    
     <section class = "startStreaming">
       <a href="/users/<%= session[:id] %>">My Page</a>
     </section>
     <section class = "SearchLink">
       <a href="">Search</a>
     </section>
+    <section class = "subscribed">
+      <a href="/users/<%= session[:id] %>/subscribed">Subscribed Channels</a>
+    </section>
     <section class = "logoutLink">
       <a href="/users/logout">Log Out</a>
     </section>
-   
+
     <% else %>
-    
     <section class = "logInLink">
       <a href="/users/login">Log In</a>
     </section>

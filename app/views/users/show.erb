@@ -7,8 +7,10 @@
 		width: 1000,
 		height: 500,
  		channel: "<%=@user.username%>",
+ 		autoplay: false,
  		video: "<video ID>",
 		collection: "<collection ID>",
+
 	};
 	var player = new Twitch.Player("<%=@user.username%>", options);
 	player.setVolume(0.5);
