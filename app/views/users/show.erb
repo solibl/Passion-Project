@@ -11,4 +11,13 @@
   <input type="hidden" name="_method" value="delete">
   <button type="submit" name="streamer"  value="<%= @user.id %>">Unsubscribe Now</button>
 </form>
+<% elsif @current_user%>
+<form action="/users/game" method="post">
+<label>Currently Playing: </label>
+	<select name="game">
+    <%= @game_selection %>
+  </select>
+  <input type="hidden" name="_method" value="patch">
+  <button type="submit">Submit</button>
+</form>
 <% end %>
