@@ -13,12 +13,8 @@ end
 
 get '/users/:id' do
 	@user = User.find(params[:id])
-	if session[:id] == @user.id
-		erb :'/users/show'
-	else
-		@errors = ["You are not authorized to see that page"]
-		erb :"index"
-	end
+	@current_user = User.find(session[:id])
+	erb :'/users/show'
 end
 
 get '/users/:id/subscribed' do

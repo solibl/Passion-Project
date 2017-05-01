@@ -1,4 +1,14 @@
 <h1><%= @user.username %></h1>
 
 <%= erb :'/users/_streamer_video' %>
-
+<% if @current_user.id != @user.id && @current_user.subscribed_streamers.include?(@user) == false %>
+<form action="/subscriptions" method="post">
+  <input type="hidden" name="_method" value="put">
+  <button type="submit" name="streamer"  value="<%= @user.id %>">Subscribe Now</button>
+</form>
+<% elsif @current_user.id != @user.id && @current_user.subscribed_streamers.include?(@user) == true %>
+<form action="/subscriptions" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" name="streamer"  value="<%= @user.id %>">Unsubscribe Now</button>
+</form>
+<% end %>
