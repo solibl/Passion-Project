@@ -1,7 +1,13 @@
 <section id = "user-login">
-<form action="/users/login" method="post">
-	<input type="text" name="username" placeholder="Username"> <br>
-	<input type="password" name="password" placeholder="Password"> <br>
-	<button type="submit">Log In</button>
-</form>
+	<% if @errors %>
+	<% @errors.each do |errors|%>
+	<%= errors %>
+	<br>
+	<% end %>
+	<% end %>
+	<form action="/users/login" method="post">
+		<input type="text" name="username" placeholder="Username"> <br>
+		<input type="password" name="password" placeholder="Password"> <br>
+		<button type="submit">Log In</button>
+	</form>
 </section>
