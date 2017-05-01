@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title>Stream Bro</title>
+  <title>StreamBro</title>
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
@@ -24,7 +24,7 @@
     <a href="">Log In</a>
     </section>
     <section class = "signUpLink">
-    <a href="">Sign Up</a>
+    <a href="/users/new">Sign Up</a>
     </section>
     <section class = "SearchLink">
     <a href="">Search</a>
@@ -33,7 +33,7 @@
 
   <div id="main">
     <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-  </div>
   <%= yield %>
+  </div>
 </body>
 </html>
