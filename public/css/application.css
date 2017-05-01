@@ -55,6 +55,13 @@ body {
     padding: .5%;
     text-align: center;
 }
+
 #user-login {
     text-align: center;
+}
+
+img {
+    position: relative;
+   width: 700px;
+   height: 400px;
 }

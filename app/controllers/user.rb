@@ -11,6 +11,10 @@ get '/users/logout' do
 	redirect '/'
 end
 
+get '/users/search' do
+	erb :'/users/search'
+end
+
 get '/users/:id' do
 	@user = User.find(params[:id])
 	@current_user = User.find(session[:id])
