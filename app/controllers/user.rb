@@ -6,6 +6,11 @@ get '/users/login' do
 	erb :'users/login'
 end
 
+get '/users/logout' do
+	logout
+	redirect '/'
+end
+
 get '/users/:id' do
 end
 

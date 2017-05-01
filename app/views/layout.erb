@@ -24,12 +24,15 @@
     <% if logged_in? %>
     
     <section class = "startStreaming">
-    <a href="/users/<%= session[:id] %>">My Page</a>
+      <a href="/users/<%= session[:id] %>">My Page</a>
     </section>
     <section class = "SearchLink">
       <a href="">Search</a>
     </section>
-    
+    <section class = "logoutLink">
+      <a href="/users/logout">Log Out</a>
+    </section>
+   
     <% else %>
     
     <section class = "logInLink">
