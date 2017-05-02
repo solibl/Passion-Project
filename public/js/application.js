@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	openNav()
 	closeNav()
+	$('.carousel').carousel()
+	 $('select').material_select()
+
 });
 
 function openNav() {
