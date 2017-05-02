@@ -1,6 +1,6 @@
 body {
     font-family: "Lato", sans-serif;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 @media screen and (max-height: 450px) {
@@ -45,11 +45,11 @@ body {
 
 #main {
     transition: margin-left .5s;
-    padding: 16px;
+    padding: 0px;
 }
 
 .content {
-    
+
     margin-left: 5%;
 }
 
@@ -65,13 +65,42 @@ body {
 }
 
 /*Search Bar*/
-img {
-    position: relative;
-    width: 700px;
-    height: 400px;
-}
 
 #streamerBox {
     display: inline-block;
     padding-top: 50px;
+}
+
+/*Carousel*/
+.carousel {
+    height: 600px;
+    padding: 200px;
+}
+
+.carousel .carousel-item {
+    width: 800px;
+    max-width: 800px;
+    height: 500px;
+    max-height: 500px;
+    text-align: center;
+}
+
+div#top-menu {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 200px;
+    height: 200px;
+    background-size: 100%;
+    font-color: white;
+    background: url('/images/background_menu.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#main-content {
+    padding-left: 5%;
+    padding-right: 2%;
 }
