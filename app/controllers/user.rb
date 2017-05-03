@@ -1,9 +1,17 @@
 get '/users/new' do
+	if request.xhr?
+	erb :'/users/_signup_form', layout: false
+	else
 	erb :'/users/new'
+	end
 end
 
 get '/users/login' do
+	if request.xhr?
+	erb :'/users/_login_form', layout: false
+	else
 	erb :'/users/login'
+	end
 end
 
 get '/users/logout' do
