@@ -34,6 +34,9 @@ get '/users/:id' do
 			@current_game = Game.find(@current_user.game_id)
 			@game_selection = build_game_selection(@current_game.game_name)
 		end
+		info = streamer_bio(@user.username)
+		info = JSON.parse(info)
+		@streamer_info = info["bio"]
 		erb :'/users/show'
 	else 
 		@errors = ["Must have an account to view users"]
