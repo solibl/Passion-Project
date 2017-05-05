@@ -90,10 +90,10 @@ div#top-menu {
     background-repeat: no-repeat;
 }
 
-#main-content {
-    padding-left: 5%;
+.main-content {
+    padding-left: 2%;
     padding-right: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 
 /*Sign Up Form*/
