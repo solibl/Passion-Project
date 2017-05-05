@@ -1,16 +1,16 @@
 get '/users/new' do
 	if request.xhr?
-	erb :'/users/_signup_form', layout: false
+		erb :'/users/_signup_form', layout: false
 	else
-	erb :'/users/new'
+		erb :'/users/new'
 	end
 end
 
 get '/users/login' do
 	if request.xhr?
-	erb :'/users/_login_form', layout: false
+		erb :'/users/_login_form', layout: false
 	else
-	erb :'/users/login'
+		erb :'/users/login'
 	end
 end
 
@@ -25,15 +25,20 @@ end
 
 get '/users/:id' do
 	@user = User.find(params[:id])
-	@current_user = User.find(session[:id])
-	if @current_user.game_id == nil
-		@current_game = Game.find(1)
-		@game_selection = build_game_selection(@current_game.game_name)
-	else
-		@current_game = Game.find(@current_user.game_id)
-		@game_selection = build_game_selection(@current_game.game_name)
+	if session[:id] != nil
+		@current_user = User.find(session[:id])
+		if @current_user.game_id == nil
+			@current_game = Game.find(1)
+			@game_selection = build_game_selection(@current_game.game_name)
+		else
+			@current_game = Game.find(@current_user.game_id)
+			@game_selection = build_game_selection(@current_game.game_name)
+		end
+		erb :'/users/show'
+	else 
+		@errors = ["Must have an account to view users"]
+		erb :'/users/new'
 	end
-	erb :'/users/show'
 end
 
 get '/users/:id/subscribed' do
