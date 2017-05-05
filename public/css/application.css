@@ -53,16 +53,6 @@ body {
     margin-left: 5%;
 }
 
-/*Sign Up Form*/
-
-.signup-form {
-    padding: .5%;
-    text-align: center;
-}
-
-#user-login {
-    text-align: center;
-}
 
 /*Search Bar*/
 
@@ -103,4 +93,26 @@ div#top-menu {
 #main-content {
     padding-left: 5%;
     padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+/*Sign Up Form*/
+
+.signup-form {
+    padding: .5%;
+    width: 50%;
+}
+
+#user-login {
+    width: 25%;
+}
+
+#streamer-title {
+    display: flex-box;
+    width: 100%;
+}
+#user-image {
+ width: 90px;
+ height: 90px;
+ border: solid;
 }

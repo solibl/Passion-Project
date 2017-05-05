@@ -1,4 +1,8 @@
-<h1><%= @user.username %></h1>
+<div id = "streamer-title">
+<img id ="user-image" src="<%= @user.logo %>">
+<h1 id = "username-next-to-picture"><%= @user.username %></h1> 
+<p id = "streamer-info"><%= @streamer_info %></p>
+</div>
 
 <%= erb :'/users/_streamer_video' %>
 <% if @current_user.id != @user.id && @current_user.subscribed_streamers.include?(@user) == false %>
