@@ -55,10 +55,14 @@ body {
 
 
 /*Search Bar*/
+.searchStream{
+    width: 100%;
+}
 
 #streamerBox {
     display: inline-block;
     padding-top: 50px;
+    padding-right: 2%;
 }
 
 /*Carousel*/
@@ -98,6 +102,9 @@ div#top-menu {
 
 /*Sign Up Form*/
 
+div.row.container{
+margin-left: 0;
+}
 .signup-form {
     padding: .5%;
     width: 50%;

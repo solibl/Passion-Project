@@ -3,14 +3,15 @@
   </div>
   <div class="section white">
   	<div class="row container">
-  		<h1 class="header">STREAMBRO</h1>
+  		<h1 class="header">Spotlight Streamer</h1>
   		<% if @errors %>
   		<% @errors.each do |errors|%>
   		<%= errors %>
   		<br>
   		<% end %>
   		<% end %>
-  		<p class="grey-text text-darken-3 lighten-3">Welcome to StreamBro</p>
+  		<p class="grey-text text-darken-3 lighten-3">Congrats to <%= @user.username %> for winning the streamer spotlight</p>
+      <%= erb :'/users/_streamer_video' %>
   	</div>
   </div>
   <div class="parallax-container">
