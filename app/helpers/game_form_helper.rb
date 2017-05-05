@@ -1,4 +1,12 @@
 module GameFormHelper
+  def select_streamers(streams)
+    users = []
+    streams.each do |stream|
+      users << User.find_by(username: stream["channel"]["display_name"])
+    end
+    users
+  end
+
   def build_game_selection(game_name)
     selection = ""
 
