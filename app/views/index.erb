@@ -10,9 +10,11 @@
   		<br>
   		<% end %>
   		<% end %>
+      <% if @user != nil %>
   		<p class="grey-text text-darken-3 lighten-3">Congrats to <%= @user.username %> for winning the streamer spotlight</p>
       <%= erb :'/users/_streamer_video' %>
-  	</div>
+  	<% end %>
+    </div>
   </div>
   <div class="parallax-container">
   	<div class="parallax"><img src="/images/homepage_2.jpg"></div>
