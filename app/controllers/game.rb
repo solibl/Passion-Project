@@ -7,7 +7,6 @@ get '/games/:id' do
 	@users_playing = select_streamers(streams["streams"])
 	# @users_playing = User.where(game_id: params[:id])
 	if request.xhr?
-		p @users_playing
 	erb :'/games/show', layout: false
 	else
 	erb :'/games/show'

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$('.parallax').parallax()
 	openNav()
 	closeNav()
 	showLogInForm()
@@ -56,7 +57,7 @@ function showSignUpForm() {
 }
 
 function showStreamsUnderCategory() {
-	$("#main-content").on("click", "a.active", function(event){
+	$(".main-content").on("click", "a.active", function(event){
 		event.preventDefault()
 		var pictureClicked = $(this)
 		$.ajax({
@@ -64,7 +65,7 @@ function showStreamsUnderCategory() {
 			method: "get"
 		}).done(function(results){
 			$(".searchStream").remove()
-			$("#main-content").append(results)
+			$(".main-content").append(results)
 		})
 	})
 }

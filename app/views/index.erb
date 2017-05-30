@@ -1,8 +1,21 @@
-<h1>Welcome to StreamBro</h1>
-
-<% if @errors %>
-<% @errors.each do |errors|%>
-<%= errors %>
-<br>
-<% end %>
-<% end %>
+  <div class="parallax-container">
+  	<div class="parallax"><img src="/images/homepage_1.jpg"></div>
+  </div>
+  <div class="section white">
+  	<div class="row container">
+  		<h1 class="header">Spotlight Streamer</h1>
+  		<% if @errors %>
+  		<% @errors.each do |errors|%>
+  		<%= errors %>
+  		<br>
+  		<% end %>
+  		<% end %>
+      <% if @user != nil %>
+  		<p class="grey-text text-darken-3 lighten-3">Congrats to <%= @user.username %> for winning the streamer spotlight</p>
+      <%= erb :'/users/_streamer_video' %>
+  	<% end %>
+    </div>
+  </div>
+  <div class="parallax-container">
+  	<div class="parallax"><img src="/images/homepage_2.jpg"></div>
+  </div>
