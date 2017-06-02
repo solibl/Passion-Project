@@ -1,0 +1,125 @@
+body {
+    font-family: "Lato", sans-serif;
+    max-width: 100%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Side Nav Bar*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+}
+
+.content {
+
+    margin-left: 5%;
+}
+
+
+/*Search Bar*/
+.searchStream{
+    width: 100%;
+}
+
+#streamerBox {
+    display: inline-block;
+    padding-top: 50px;
+    padding-right: 2%;
+}
+
+/*Carousel*/
+.carousel {
+    height: 600px;
+    padding: 200px;
+}
+
+.carousel .carousel-item {
+    width: 800px;
+    max-width: 800px;
+    height: 500px;
+    max-height: 500px;
+    text-align: center;
+}
+
+div#top-menu {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 200px;
+    height: 200px;
+    background-size: 100%;
+    font-color: white;
+    background: url('/images/background_menu.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main-content {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+}
+
+/*Sign Up Form*/
+
+div.row.container{
+margin-left: 0;
+}
+.signup-form {
+    padding: .5%;
+    width: 50%;
+}
+
+#user-login {
+    width: 25%;
+}
+
+#streamer-title {
+    display: flex-box;
+    width: 100%;
+}
+#user-image {
+ width: 90px;
+ height: 90px;
+ border: solid;
+}

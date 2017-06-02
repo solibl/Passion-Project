@@ -1,0 +1,29 @@
+<section id = "signup-form">
+	<% if @errors %>
+	<% @errors.each do |errors|%>
+	<%= errors %>
+	<br>
+	<% end %>
+	<% end %>
+	<form action="/users" method="post">
+		<div id = "signup-elements">
+			<label>Username</label> <br>
+			<input type="text" name="user[username]">
+		</div> <br>
+		<div id = "signup-elements">	
+			<label>Full Name</label> <br>
+			<input type="text" name="user[full_name]">
+		</div> <br>
+		<div id = "signup-elements">
+			<label>Email</label> <br>
+			<input type="email" name="user[email]">
+		</div> <br>
+		<div id = "signup-elements">
+			<label>Password</label> <br>
+			<input type="text" name="user[password]">
+		</div> <br>
+		<div id = "signup-elements">
+			<button type="submit">Sign Up</button>
+		</div>
+	</form>
+</section>
